@@ -73,6 +73,7 @@ module Hutch
     string_setting :mq_api_host, '127.0.0.1'
 
     # RabbitMQ port
+    # RabbitMQ port
     number_setting :mq_port, 5672
 
     # RabbitMQ HTTP API port
