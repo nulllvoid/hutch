@@ -12,13 +12,13 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'multi_json', '~> 1.15'
   gem.add_runtime_dependency 'activesupport', '>= 4.2', '< 8'
 
-  gem.name = 'shivam'
+  gem.name = 'hutch'
   gem.summary = 'Opinionated asynchronous inter-service communication using RabbitMQ'
   gem.description = 'Hutch is a Ruby library for enabling asynchronous inter-service communication using RabbitMQ'
-  gem.version = '0.0.0'
+  gem.version = "3.2.1"
   gem.required_ruby_version = '>= 2.6'
-  gem.authors = ['Shivam Shah']
-  gem.homepage = 'https://github.com/ruby-amqp/hutch'
+  gem.authors = ['Harry Marr', 'Michael Klishin']
+  gem.homepage = 'https://github.com/nulllvoid/hutch'
   gem.require_paths = ['lib']
   gem.license = 'MIT'
   gem.executables = ['hutch']

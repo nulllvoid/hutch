@@ -137,7 +137,12 @@ module Hutch
     end
 
     def declare_publisher!
-      @publisher = Hutch::Publisher.new(connection, channel, exchange, @config)
+      @publisher = declare_publisher(exchange)
+    end
+
+    def declare_publisher(exch)
+      logger.info "using #{exch.name} publisher"
+      Hutch::Publisher.new(connection, channel, exch)
     end
 
     # Set up the connection to the RabbitMQ management API. Unfortunately, this
