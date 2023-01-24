@@ -6,12 +6,10 @@ module Hutch
     class NackOnAllFailures < Base
       include Logging
 
-      def handle(delivery_info, properties, broker, ex)
+      def handle(delivery_info, properties, broker, payload, ex)
         prefix = "message(#{properties.message_id || '-'}): "
         logger.debug "#{prefix} nacking message"
-
         broker.nack(delivery_info.delivery_tag)
-
         true
       end
     end

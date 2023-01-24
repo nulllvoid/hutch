@@ -152,7 +152,7 @@ describe Hutch::Worker do
                                  delivery_tag: 'dt') }
     let(:properties) { double('Properties', message_id: 'abc123') }
 
-    subject { worker.acknowledge_error delivery_info, properties, broker, StandardError.new }
+    subject { worker.acknowledge_error delivery_info, properties, broker, payload, consumer, StandardError.new }
 
     it 'stops when it runs a successful acknowledgement' do
       skip_ack = double handle: false
